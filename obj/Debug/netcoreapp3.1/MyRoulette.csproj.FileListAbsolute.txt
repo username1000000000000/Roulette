@@ -1,0 +1,12 @@
+/Users/davidrobertson/Projects/MyRoulette/MyRoulette/bin/Debug/netcoreapp3.1/MyRoulette.deps.json
+/Users/davidrobertson/Projects/MyRoulette/MyRoulette/bin/Debug/netcoreapp3.1/MyRoulette.runtimeconfig.json
+/Users/davidrobertson/Projects/MyRoulette/MyRoulette/bin/Debug/netcoreapp3.1/MyRoulette.runtimeconfig.dev.json
+/Users/davidrobertson/Projects/MyRoulette/MyRoulette/bin/Debug/netcoreapp3.1/MyRoulette.dll
+/Users/davidrobertson/Projects/MyRoulette/MyRoulette/bin/Debug/netcoreapp3.1/MyRoulette.pdb
+/Users/davidrobertson/Projects/MyRoulette/MyRoulette/obj/Debug/netcoreapp3.1/MyRoulette.csprojAssemblyReference.cache
+/Users/davidrobertson/Projects/MyRoulette/MyRoulette/obj/Debug/netcoreapp3.1/MyRoulette.csproj.CoreCompileInputs.cache
+/Users/davidrobertson/Projects/MyRoulette/MyRoulette/obj/Debug/netcoreapp3.1/MyRoulette.AssemblyInfoInputs.cache
+/Users/davidrobertson/Projects/MyRoulette/MyRoulette/obj/Debug/netcoreapp3.1/MyRoulette.AssemblyInfo.cs
+/Users/davidrobertson/Projects/MyRoulette/MyRoulette/obj/Debug/netcoreapp3.1/MyRoulette.dll
+/Users/davidrobertson/Projects/MyRoulette/MyRoulette/obj/Debug/netcoreapp3.1/MyRoulette.pdb
+/Users/davidrobertson/Projects/MyRoulette/MyRoulette/obj/Debug/netcoreapp3.1/MyRoulette.genruntimeconfig.cache

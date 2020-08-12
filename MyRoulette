@@ -1,0 +1,92 @@
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+
+
+namespace MyRoulette
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            
+            //PLAYER WILL BE CREATED AT BEGINNING OF RUN TIME 
+            Console.WriteLine("Enter a username to get started: ");
+            var username = Console.ReadLine();
+            var user = new Player(username);
+            Console.WriteLine($"Greetings {user.Username}!");
+            var round = 1;
+
+            do
+            {
+                Console.WriteLine($"Round: {round}");
+                
+                //A) BETS ARE MADE HERE
+                Console.WriteLine("Bet on single number(s)?"); //SINGLE NUMBERS BET
+
+             
+                Console.WriteLine("Bet on evens? (enter 'yes' to bet)"); //EVENS BET
+                var betTwo = BetLine.EvensBet(Console.ReadLine());
+                
+
+                Console.WriteLine("Bet on odds? (enter 'yes' to bet)"); //ODDS BET
+                var betThree = BetLine.OddsBet(Console.ReadLine());
+               
+
+                Console.WriteLine("Bet on reds? (enter 'yes' to bet)"); //REDS BET
+                var betFour = BetLine.RedsBet(Console.ReadLine());
+                
+
+                Console.WriteLine("Bet on blacks? (enter 'yes' to bet)"); //BLACKS BET
+                var betFive = BetLine.BlacksBet(Console.ReadLine());
+
+                Console.WriteLine("-------------------------------------------");
+                Console.WriteLine($"Your total in bets for this round: {BetLine.BetsAmount}$");
+
+                //B) METHOD WILL RETURN A RANDOM ELEMENT 
+                var result = Wheel.DisplayWheel();
+                Console.WriteLine($"Winning slot: {result.Key + " " + result.Value}");
+
+                //C) BETS WILL BE EVALUATED TO RANDOM ELEMENT
+                if (betTwo > 0 && result.Key % 2 == 0) //EVENS BET EVALUATED
+                {
+                    user.Balance += betTwo;
+                }
+                else
+                {
+                    user.Balance -= betTwo;
+                }
+                if (betThree > 0 && result.Key % 2 != 0) //ODDS BET EVALUATED
+                {
+                    user.Balance += betThree;
+                }
+                else
+                {
+                    user.Balance -= betThree;
+                }
+                if (betFour > 0 && result.Value == "Red") //ODDS BET EVALUATED
+                {
+                    user.Balance += betFour;
+                }
+                else
+                {
+                    user.Balance -= betFour;
+                }
+                if (betFive > 0 && result.Value == "Black") //ODDS BET EVALUATED
+                {
+                    user.Balance += betFive;
+                }
+                else
+                {
+                    user.Balance -= betFive;
+                }
+
+                round++;
+                Console.WriteLine($"You have {user.Balance}$ available");
+                Console.WriteLine("-------------------------------------------");
+
+            } while (user.Balance > 0.00); //D) LOOP WILL REPEAT IF BALANCE > 0
+        }
+    }
+}
